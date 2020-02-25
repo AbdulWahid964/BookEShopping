@@ -46,14 +46,14 @@ public class BookConfiguration extends WebSecurityConfigurerAdapter{
 			http
 			.authorizeRequests()
 			.antMatchers("/css/*","/js/*","/img/*","/showUserRegistration","/saveUserRegistrationForm","/login").permitAll()
-			//antMatchers("/home")
-			//.hasAnyRole("admin")
+			.antMatchers("/test")
+			.hasAnyRole("admin")
 			//for this /add it will authenticated apart from that nothing will be authenticated
 			// .antMatchers("/add").authenticated()  
 			//for every request i.e /home, /add .. anything it will be authenticated 
 			.anyRequest().authenticated()
-			//.and()
-		  //  .exceptionHandling().accessDeniedPage("/accessDenied")
+			.and()
+		    .exceptionHandling().accessDeniedPage("/accessDenied")
 			.and()
 			.formLogin()
 			.loginPage("/login").defaultSuccessUrl("/home", true)

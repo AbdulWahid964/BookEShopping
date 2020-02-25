@@ -69,7 +69,9 @@
     </td>
     </tr> --%>
     <tr><td align="right"><input type="submit" value="Submit"/></td><td align="left">
-    <input type="reset" value="Reset"/></td></tr>
+    <input type="reset" value="Reset"/></td>
+    <a href="/login">Login</a> 
+    </tr>
     <!-- <a href="/login">Login</a> -->
     </table>
  </form:form>

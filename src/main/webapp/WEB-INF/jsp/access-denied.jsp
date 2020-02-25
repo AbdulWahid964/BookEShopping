@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Home Page</h1>
 
-<a href="test">Test</a>
 
-<a href="logout">Logout</a>
+<h2>Access Denied For you ,, only admin can access</h2>
+<a href="logout">logout</a>
 </body>
 </html>
