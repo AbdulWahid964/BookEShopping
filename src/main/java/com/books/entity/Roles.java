@@ -1,12 +1,10 @@
 package com.books.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -20,16 +18,10 @@ public class Roles {
 	
 	@Column(name="roles")
 	private String roles;
-	
-	@OneToOne(cascade=CascadeType.ALL)
-	private Users user;
-	
-	public Users getUser() {
-		return user;
-	}
 
-	public void setUser(Users user) {
-		this.user = user;
+	public Roles(String roles) {
+		super();
+		this.roles = roles;
 	}
 
 	public int getId() {
@@ -45,11 +37,6 @@ public class Roles {
 	}
 
 	public void setRoles(String roles) {
-		this.roles = roles;
-	}
-
-	public Roles(String roles) {
-		super();
 		this.roles = roles;
 	}
 }

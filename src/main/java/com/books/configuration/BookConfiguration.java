@@ -32,9 +32,9 @@ public class BookConfiguration extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.jdbcAuthentication().dataSource(dataSource()).
-		//passwordEncoder(passwordEncoder()).
-		usersByUsernameQuery("select user_name,password,enabled from user_registration where user_name=?").
-		authoritiesByUsernameQuery("select u.user_name as username, r.roles as role from user_registration u INNER JOIN roles r ON r.user_id = u.id where user_name=?");
+		passwordEncoder(passwordEncoder()).
+		usersByUsernameQuery("select user_name,encoded_password,enabled from user_registration where user_name=?").
+		authoritiesByUsernameQuery("select u.user_name as username, r.roles as role from user_registration u INNER JOIN roles r ON r.role_id = u.role_role_id where user_name=?");
 	
 	}
 

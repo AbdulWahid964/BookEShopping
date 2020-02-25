@@ -56,7 +56,7 @@
 					value="${_csrf.token}">
 				<input type="submit" class="fadeIn fourth" value="Log In">
 			</form:form>
-			<a href="showRegistration"> click here to register</a>
+			<a href="showUserRegistration"> click here to register</a>
 		</div>
 	</div>
 </body>
