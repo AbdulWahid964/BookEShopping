@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <h1>Home Page</h1>
 
-<a href="showBooks">Show Books</a>
+<a href="addBooks">Add Books</a><br/>
+<a href="showBooks">Show Books</a><br/>
 
 <a href="logout">Logout</a>
 </body>
