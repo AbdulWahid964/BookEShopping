@@ -6,8 +6,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style type="text/css">
+.formError {
+	color: red;
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Book Details</title>
 </head>
 <body>
 	<center>
@@ -34,19 +39,16 @@
 					<td>Price</td>
 					<td><form:input path="price" cssClass="formInput"
 							placeholder="Enter Price" /></td>
-					<td><form:errors path="price" cssClass="formError" /></td>
 				</tr>
 				<tr>
 					<td>Quantity</td>
 					<td><form:input path="quantity" cssClass="formInput"
 							placeholder="Enter Quantity" /></td>
-					<td><form:errors path="quantity" cssClass="formError" /></td>
 				</tr>
 				<tr>
 					<td>Description</td>
 					<td><form:input path="description" cssClass="formInput"
 							placeholder="Enter Description" /></td>
-					<td><form:errors path="description" cssClass="formError" /></td>
 				</tr>
 				<tr>
 					<td colspan="2"><c:if test="${!empty books.bookName}">

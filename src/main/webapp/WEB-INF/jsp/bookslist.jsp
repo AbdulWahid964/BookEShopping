@@ -32,7 +32,7 @@
 </style>
 </head>
 <body>
-	<center>
+	 <center>
 		<h2>Books Details</h2>
 		<br /> <br />
 		<table class="table">
@@ -46,6 +46,10 @@
 				<th width="80">Edit</th>
 				<th width="80">Delete</th>
 			</tr>
+			<c:if test="${list.size() eq 0}">
+			<tr>
+					<td colspan=8>No Data to be display</td>
+			</c:if>
 			<c:forEach var="listbooks" items="${list}">
 				<tr>
 					<td>${listbooks.bookID}</td>

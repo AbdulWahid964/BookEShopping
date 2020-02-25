@@ -17,15 +17,18 @@ public class BooksServiceImpl implements BooksService {
 	@Override
 	public void saveBooks(Books books) {
 		
-		Books bookObj=booksDao.findOne(books.getBookID());
-		System.out.println("bookObj.getBookID()" +bookObj.getBookID());
-		if(bookObj.getBookID()>0){
-			bookObj.setBookName(books.getBookName());
-			bookObj.setAuthorName(books.getAuthorName());
-			bookObj.setPrice(books.getPrice());
-			bookObj.setQuantity(books.getQuantity());
-			bookObj.setDescription(books.getDescription());
+		if(books.getBookID()>0){
+			Books bookObj=booksDao.findOne(books.getBookID());
+			if(bookObj.getBookID()>0){
+				bookObj.setBookName(books.getBookName());
+				bookObj.setAuthorName(books.getAuthorName());
+				bookObj.setPrice(books.getPrice());
+				bookObj.setQuantity(books.getQuantity());
+				bookObj.setDescription(books.getDescription());
+				booksDao.save(bookObj);
+			}
 		}
+		
 		booksDao.save(books);
 
 	}

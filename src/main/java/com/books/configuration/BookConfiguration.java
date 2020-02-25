@@ -79,7 +79,7 @@ public class BookConfiguration extends WebSecurityConfigurerAdapter{
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");   //  this is depretected com.mysql.cj.jdbc.Driver
 		dataSource.setUrl("jdbc:mysql://localhost:3306/books");
 		dataSource.setUsername("root");
-		dataSource.setPassword("1234");
+		dataSource.setPassword("root");
 		return dataSource;
 	}
 
