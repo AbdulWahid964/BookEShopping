@@ -7,38 +7,41 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "books")
 public class Books {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "bookid")
 	private int bookID;
-	
+
 	@Column(name = "bookname")
 	@NotEmpty
+	@Size(min = 5, max = 20)
 	private String bookName;
-	
+
 	@Column(name = "authorname")
 	@NotEmpty
+	@Size(min = 3, max = 20)
 	private String authorName;
-	
+
 	@Column(name = "price")
 	@NotNull
 	private long price;
-	
+
 	@Column(name = "quantity")
 	@NotNull
 	private int quantity;
-	
+
 	@Column(name = "description")
 	@NotEmpty
 	private String description;
-	
+
 	public int getBookID() {
 		return bookID;
 	}

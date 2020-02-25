@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <h1>Home Page</h1>
 <c:if test="${role eq '[admin]'}">
 <a href="showBooks">Add Books</a>
@@ -18,8 +19,13 @@
 <div>
 Welcome Back <sec:authentication property="name"/> 
 
+<<<<<<< HEAD
 <sec:authentication property="principal.authorities"/>
 <a href="logout">Logout</a></div>
+=======
+<a href="addBooks">Add Books</a><br/>
+<a href="showBooks">Show Books</a><br/>
+>>>>>>> branch 'master' of https://github.com/AbdulWahid964/BookEShopping.git
 
 </body>
 </html>
