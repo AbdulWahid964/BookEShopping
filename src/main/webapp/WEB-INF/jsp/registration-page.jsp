@@ -50,10 +50,14 @@
     <tr>
     	<td>Contact Number</td>
     	<td><form:input path="contactNumber"  cssClass="formInput" placeholder="Enter Contact Number"/></td>
+    	<td><form:errors path="contactNumber"  cssClass="formError"/></td>
     </tr>
     <tr>
     	<td>Gender</td>
-    	<td><form:input path="gender"  cssClass="formInput" placeholder="Enter Gender"/></td>
+    	<td><form:select path="gender"  cssClass="formInput">
+    	<form:option value="Male">Male</form:option>
+    	<form:option value="Female">Female</form:option>
+    	</form:select></td>
     </tr>
   <%--   <tr>
     	<td>Role:</td>

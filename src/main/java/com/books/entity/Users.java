@@ -39,8 +39,7 @@ public class Users {
 	
 	private String address;
 	
-	/*@Pattern(regexp="[0-9]",message="Please Enter only the numbers")
-	@NotEmpty(message="Contact Number should be Empty")*/
+	@Pattern(regexp = "[0-9]{10}", message = "must conatins 10 digits only")
 	private String contactNumber;
 	
 	private int enabled;
