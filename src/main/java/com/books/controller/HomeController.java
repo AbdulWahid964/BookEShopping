@@ -12,10 +12,5 @@ public class HomeController {
 
 		return new ModelAndView("/home");
 	}
-	@RequestMapping("/test")
-	public ModelAndView showTest(){
-
-		return new ModelAndView("/test");
-	}
 
 }
