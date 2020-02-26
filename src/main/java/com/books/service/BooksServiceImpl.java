@@ -47,4 +47,10 @@ public class BooksServiceImpl implements BooksService {
 	public Books editBooks(int bookID) {
 		return booksDao.findOne(bookID);
 	}
+
+	@Override
+	public List<Books> getSearchBooks(String bookName) {
+		return booksDao.findByBookName(bookName);
+	}
+	
 }
