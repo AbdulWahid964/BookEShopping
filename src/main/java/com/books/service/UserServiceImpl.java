@@ -18,4 +18,10 @@ public class UserServiceImpl implements UserService{
 		
 	}
 
+	@Override
+	public Users getUserName(String name) {
+		Users users	= usersDao.findByUserName(name);
+		return users;
+	}
+
 }

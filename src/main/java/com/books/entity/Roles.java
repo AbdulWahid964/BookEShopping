@@ -23,7 +23,9 @@ public class Roles {
 		super();
 		this.roles = roles;
 	}
-
+public Roles() {
+	// TODO Auto-generated constructor stub
+}
 	public int getId() {
 		return id;
 	}

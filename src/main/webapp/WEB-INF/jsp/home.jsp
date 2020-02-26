@@ -43,12 +43,12 @@
 <div>
 <c:if test="${role eq '[user]'}">
 <center>
-<h2>Books Search</h2>â€‹
-<form  action="/find">â€‹
-<input type="text" name="bookname" class="form-control"â€‹ placeholder="Search the products"/>â€‹
-<button type="submit" value="save">Search</button>â€‹
-</form> â€‹
-<br/>â€‹
+<h2>Books Search</h2>€‹
+<form  action="/find">€‹
+<input type="text" name="bookname" class="form-control" placeholder="Search the products"/>€‹
+<button type="submit" value="save">Search</button>€‹
+</form>€‹
+<br/>€‹
 <br/>
 
 		<h2>Books Details</h2>
@@ -75,12 +75,15 @@
 					<td>${listbooks.price}</td>
 					<td>${listbooks.quantity}</td>
 					<td>${listbooks.description}</td>
-					<td><a href="<c:url value='/cart/${listbooks.bookID}' />">Add To Cart</a></td>
+					<td><a href="<c:url value='viewcart/${listbooks.bookID}' />">Add To Cart</a></td>
+					<%-- <td><a href="<c:url value='/cart/${listbooks.bookID}' />">Add To Cart</a></td> --%>
 				</tr>
 			</c:forEach>
+			
 		</table>
 		<br/>
 		<a href="${pageContext.request.contextPath}/home"> Back</a>
+		<a href="<c:url value='viewcart/0' />">Go To Cart</a>
 	</center>
 	</c:if>
 </div>

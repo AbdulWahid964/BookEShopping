@@ -50,7 +50,7 @@
 			<form:form action="/login" method="POST">
 				<input type="text" id="username" class="fadeIn second"
 					name="username" placeholder="enter username">
-				<input type="password" id="password" class="fadeIn third"
+				<input type="text" id="password" class="fadeIn third"
 					name="password" placeholder="password">
 				<input type="hidden" name="${_csrf.parameterName}"
 					value="${_csrf.token}">
