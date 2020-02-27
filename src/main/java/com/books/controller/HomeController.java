@@ -23,7 +23,6 @@ public class HomeController {
 	public ModelAndView showHome(Model model){
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String role= auth.getAuthorities().toString();
-
 	    model.addAttribute("role",role);
 	    List<Books> list = bookService.findAll();
 		return new ModelAndView("/home", "list", list);

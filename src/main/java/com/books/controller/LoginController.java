@@ -14,7 +14,7 @@ public class LoginController {
 	public String showLogin(){
 
 		System.out.println("login");
-		return "login";
+		return "login2";
 	}
 
 	@RequestMapping("/logout")
@@ -26,7 +26,7 @@ public class LoginController {
 	//	} 
 
 		session.invalidate();
-		return "redirect:/login";
+		return "redirect:/login2";
 	}
 	@RequestMapping("/accessDenied")
 	public String accessDenied(HttpServletRequest request,HttpServletResponse response,HttpSession session){

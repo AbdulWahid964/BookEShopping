@@ -80,6 +80,19 @@ public class BookController {
 		
 		return new ResponseEntity<BooksResponseError>(booksResponseError,HttpStatus.BAD_REQUEST);
 	}
+	/*@ExceptionHandler
+	public ModelAndView handleException(BookNotFoundException exception){
+	//	BooksResponseError booksResponseError = new BooksResponseError();
+		
+		//booksResponseError.setStatus(HttpStatus.BAD_REQUEST.value());
+		//booksResponseError.setMessage(exception.getMessage());
+		//booksResponseError.setTimeStamp(System.currentTimeMillis());
+	
+		return new ModelAndView("error","exception",exception.getMessage());
+	//	return new ResponseEntity<BooksResponseError>(booksResponseError,HttpStatus.BAD_REQUEST);
+	}*/
+	
+	
 	
 /*	@RequestMapping("/find")
 	public ModelAndView searchBook(@RequestParam("bookname") String bookName)
