@@ -2,6 +2,8 @@ package com.books.controller;
 
 import java.util.List;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +26,8 @@ import com.books.service.BooksService;
 @RestController
 public class BookController {
 
+	private static final Logger logger = LogManager.getLogger(BookController.class);
+	
 	@Autowired
 	BooksService bookService;
 
@@ -45,8 +49,9 @@ public class BookController {
 
 	@RequestMapping(value = "/showBooks", method = RequestMethod.GET)
 	public ModelAndView showBookForm() {
-
+		logger.info("showBookForm");
 		List<Books> list = bookService.findAll();
+		logger.info("Book Details Fetched with this no of size " + list.size());
 		return new ModelAndView("bookslist", "list", list);
 	}
 

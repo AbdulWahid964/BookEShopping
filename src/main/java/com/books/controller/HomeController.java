@@ -21,6 +21,7 @@ public class HomeController {
 	
 	@RequestMapping("/home")
 	public ModelAndView showHome(Model model){
+		
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String role= auth.getAuthorities().toString();
 	    model.addAttribute("role",role);
